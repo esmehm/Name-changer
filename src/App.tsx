@@ -4,14 +4,14 @@ import './App.css';
 
 function App() {
   let name = "Esme"
-  console.log("I have rendered!")
+  console.log("App has updated!")
   console.log("name", name)
   return (
     <div className="App">
       <header className="App-header">
         Name changer!
       </header>
-      <div>
+      <div className="name-display">
         Name: {name}
       </div>
       <div>
@@ -20,6 +20,7 @@ function App() {
         <button onClick={() => name = "Olivia"}>Olivia</button>
         <button onClick={() => name = "India"}>India</button>
       </div>
+      <button onClick={()=>console.log(name)}>Log name</button>
 
     </div>
 

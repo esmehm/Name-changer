@@ -1,3 +1,16 @@
+This is a demonstation of why we need state. 
+
+The goal of this app is to create a name changer: we want to be able to select a name using the relevant buttons and show it at the top.
+
+Without knowledge of React, scholars may therefore assume this could be achieved by using a varialbe `name` , displaying it in the `name-display` `div` and changing it via the `onClick` event listener. As this demonstrates, they would be correct in assuming that this will change the value of the `name` variable however would be disapointed that they cannot see the `name` change on screen in the `name-display` div. 
+
+The `name-display` `div` sits within the `App` component. React Components only update when either their state or their props change. Currently `App` is stateless (it does not have a state defined) and is not passed any props - therefore it will never update. We have included the log statement `App has updated!` to demonstrate how it only loads the first time and will never update again at the moment. Unless `App` updates, the `name-display` `div` has no way to know that `name` has changed and so will not update the value it shows. 
+
+I have added a button to log `name` to demonstrate how the value of `name` does change depending on the name button clicked and so to highlight that the problem is only because the `App` is not updating.
+
+This is therefore a great use-case for state. If we define `name` using state then when we change `name` then `App` will update and so the `name-display` `div` will reflect the change. 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
